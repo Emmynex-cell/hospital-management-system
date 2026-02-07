@@ -1,0 +1,216 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+}
+
+.sidebar {
+  width: 180px;
+  background-color: #1f2937;
+  color: white;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #374151;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.form input, .form select, .form textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.btn-add {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #2563eb;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table th {
+  background-color: #f3f4f6;
+}
+
+table td img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}/* Button hover animation */
+.btn-add, .btn-delete {
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255,0,0,0.3);
+}
+
+/* Table row hover highlight */
+table tbody tr:hover {
+  background-color: #f0f9ff;
+}
+
+/* Sidebar active item highlight */
+.sidebar ul li.active {
+  background-color: #2563eb;
+}/* Click to select a table row */
+table tbody tr.selected {
+  background-color: #d1fae5 !important;
+}#appointmentsTable td img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+#appointmentsTable td img:hover {
+  transform: scale(1.1);
+}@media (max-width: 768px){
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar ul li {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .main-content {
+    padding: 10px;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .form input, .form select, .form textarea {
+    flex: 100%;
+  }
+}.badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.badge-pending {
+  background-color: #fbbf24; /* yellow */
+}
+
+.badge-confirmed {
+  background-color: #22c55e; /* green */
+}
+
+.badge-cancelled {
+  background-color: #ef4444; /* red */
+}table tbody tr:nth-child(even){
+  background-color: #f9fafb;
+}
+
+table tbody tr:hover {
+  background-color: #dbeafe;
+  transform: scale(1.01);
+  transition: all 0.2s;
+}table tbody tr:nth-child(even){
+  background-color: #f9fafb;
+}
+
+table tbody tr:hover {
+  background-color: #dbeafe;
+  transform: scale(1.01);
+  transition: all 0.2s;
+}.form {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s;
+}
+
+.form:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table::-webkit-scrollbar {
+  height: 8px;
+}
+
+table::-webkit-scrollbar-thumb {
+  background-color: #2563eb;
+  border-radius: 4px;
+}.btn-add:active, .btn-delete:active {
+  transform: scale(0.95);
+}

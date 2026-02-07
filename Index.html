@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li onclick="showSection('patients')">Patients</li>
+      <li onclick="showSection('doctors')">Doctors</li>
+      <li onclick="showSection('appointments')">Appointments</li>
+      <li onclick="showSection('contact')">Contact</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- Logo -->
+    <img src="assets/hospital_logo.png" alt="Hospital Logo" class="logo">
+
+<div class="form">
+  <input id="patientName" placeholder="Patient Name">
+  <input id="patientAge" type="number" placeholder="Age">
+  <input id="patientDisease" placeholder="Disease">
+  <input type="file" id="patientPhoto" accept="image/*">
+  <button class="btn-add" onclick="addPatient()">Add Patient</button>
+</div>
+  
+<div class="form">
+  <input id="doctorName" placeholder="Doctor Name">
+  <input id="doctorSpecialty" placeholder="Specialty">
+  <!-- ADD THIS FILE INPUT -->
+  <input type="file" id="doctorPhoto" accept="image/*">
+  <button class="btn-add" onclick="addDoctor()">Add Doctor</button>
+</div>
+
+
+    <!-- Appointments Section -->
+    <section id="appointments" class="section">..</section></section></section>
+      <h2>Appointments</h2>
+      <div class="form">
+        <select id="appointmentPatient"></select>
+        <select id="appointmentDoctor"></select>
+        <input type="date" id="appointmentDate">
+        <input type="time" id="appointmentTime">
+        <button class="btn-add" onclick="addAppointment()">Book Appointment</button>
+      </div>
+<table id="appointmentsTable">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Patient</th>
+      <th>Photo</th>        <!-- NEW -->
+      <th>Doctor</th>
+      <th>Photo</th>        <!-- NEW -->
+      <th>Date</th>
+      <th>Time</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<!-- Add a search input for filtering -->
+<input type="text" id="appointmentSearch" placeholder="Search Appointments" onkeyup="searchAppointments()">
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="display:none;">...</section>
+      <h2>Contact Us</h2>
+      <div class="form">
+        <input id="contactName" placeholder="Your Name">
+        <input id="contactEmail" type="email" placeholder="Your Email">
+        <textarea id="contactMessage" placeholder="Your Message" rows="5"></textarea>
+        <button class="btn-add" onclick="sendMessage()">Send Message</button>
+      </div>
+      <p id="contactStatus" style="color: green; margin-top: 10px;"></p>
+
+      <table id="messagesTable" style="margin-top: 20px;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html><button onclick="clearAll()">Clear All Data</button>
